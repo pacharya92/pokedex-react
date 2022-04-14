@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import './App.css'
-import Pokedex from './Pokedex'
-import Pokegame from './Pokegame'
+import '../styles/App.css'
+import Pokedex from '../views/Pokedex'
+import Pokegame from '../views/Pokegame'
 
 class App extends Component {
   render() {

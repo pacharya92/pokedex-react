@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './Pokecard.css'
+import '../styles/Pokecard.css'
 
 const POKE_API = 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/'
 const generatePokeId = pokeId => {
