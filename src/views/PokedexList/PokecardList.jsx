@@ -6,17 +6,26 @@ import {generatePokeId, POKE_IMG_URL} from '../../utils/pokeApi'
 const Pokecard = props => {
   let pokeId = generatePokeId(props.id)
   let imgSrc = `${POKE_IMG_URL}${pokeId}${props.id}.png`
+  let type = props.type.toLowerCase()
   return (
     <div
-      style={{borderColor: pokemonColor[props.type], borderStyle: 'solid'}}
+      style={{
+        backgroundColor: pokemonColor[type],
+        borderColor: pokemonColor[type],
+        borderStyle: 'solid',
+        position: 'relative',
+      }}
       className="Pokecard"
     >
       <div className="Pokecard-image">
+        <div className="top-right">
+          <h1 style={{color: pokemonColor[type]}}>{`#${pokeId}${props.id}`}</h1>
+        </div>
         <img src={imgSrc} alt={props.name} />
       </div>
-      <div className="Pokecard-data">Type: {props.type}</div>
-      <div className="Pokecard-data">Exp: {props.base_experience}</div>
-      <h1 className="Pokecard-title">{props.name}</h1>
+      <div style={{backgroundColor: pokemonColor[type]}}>
+        <h1 className="Pokecard-title">{props.name}</h1>
+      </div>
     </div>
   )
 }

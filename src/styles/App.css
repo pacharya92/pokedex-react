@@ -1,3 +1,5 @@
-.App {
-  text-align: center;
+/* Remove default margin set by default style sheet used to render HTML in Chrome */
+body {
+  display: block;
+  margin: 0px;
 }
