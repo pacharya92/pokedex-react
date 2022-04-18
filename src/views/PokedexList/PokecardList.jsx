@@ -13,7 +13,6 @@ const Pokecard = props => {
         backgroundColor: pokemonColor[type],
         borderColor: pokemonColor[type],
         borderStyle: 'solid',
-        position: 'relative',
       }}
       className="Pokecard"
     >
